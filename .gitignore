@@ -26,3 +26,14 @@
 *.exe
 *.out
 *.app
+
+#CMake crap
+*.cmake
+CMakeFiles/*
+CMakeCache.txt
+
+#IDE crap
+*.vcxproj*
+*.opensdf
+*.sdf
+*.sln
