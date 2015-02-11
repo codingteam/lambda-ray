@@ -1,8 +1,19 @@
-#include <gl.h>
+/**
+ *
+ *
+ */
+
+#pragma once
+
+#include <RenderWindow.hpp>
 
 
 namespace <{1:core}> {
 
+/**
+ * @brief Uber-class that is for making unite OpenCL render and OpenGL display output.
+ *
+ */
 class Viewport {
 public:
     Viewport() = delete; // perhaps we want make viewport without sizes?
@@ -34,11 +45,10 @@ protected:
      */
     void init();
 
+    void render();
+
 private:
-
-    size_t _width;
-    size_t _height;
-
+    sfml::RenderWindow _window;
 };
 
 } // namespace core
