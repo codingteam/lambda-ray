@@ -12,6 +12,7 @@ struct DeviceInfo {
     // blah
 };
 
+
 void cl_assert( const cl_int errorCode, const str::string& message )
 {
     if( errorCode != CL_SUCCESS ) {
@@ -30,9 +31,9 @@ void CLRender::init()
 
     // log() << "Amount of platforms is: " <<  platforms.size();
 
-    auto get_platform_info = [this] ( const cl::Platform platform ) {
+    auto get_platform_info = [this] ( const cl::Platform& platform ) {
         DeviceInfo device;
-        auto get_info = [this] ( const cl::Platform platform, const cl_platform_info infoType ) {
+        auto get_info = [this] ( const cl::Platform& platform, const cl_platform_info infoType ) {
             std::string str;
             platform.getInfo( infoType, &str );
             return str;
@@ -47,4 +48,5 @@ void CLRender::init()
     cl_int error;
     auto context = cl::context( CL_DEVICE_TYPE_CPU, cprops, NULL, NULL, &error );
     cl_assert( error, "Cannot create context" );
+
 }
