@@ -38,3 +38,6 @@ CMakeCache.txt
 *.sdf
 *.sln
 *.suo
+Win32/*
+Debug/*
+lambdaray.dir/*

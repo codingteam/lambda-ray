@@ -1,9 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
-file(GLOB_RECURSE SOURCES "src/*.cpp")
+PROJECT(lambda-ray C CXX)
+
+file(GLOB_RECURSE SOURCES "./src" "*.cpp")
+file(GLOB_RECURSE HEADERS "./src" "*.hpp")
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 find_package(OpenCL REQUIRED)
-include_directories(${OPENCL_INCLUDE_DIR})
+include_directories(${_OPENCL_CPP_INCLUDE_DIRS})
 
-add_executable(lambdaray ${SOURCES})
+add_executable(lambdaray ${SOURCES} ${HEADERS})
 target_link_libraries(lambdaray ${OPENCL_LIBRARIY})
