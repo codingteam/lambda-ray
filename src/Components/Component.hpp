@@ -5,6 +5,7 @@
 #include "../Resources/Resource.hpp"
 
 class Component {
-private:
-	std::map<std::string, Resource> resources;
+public:
+	Component();
+	virtual ~Component();
 };
