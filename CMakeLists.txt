@@ -6,7 +6,7 @@ file(GLOB_RECURSE HEADERS "./src" "*.hpp")
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 find_package(OpenCL REQUIRED)
-include_directories(${_OPENCL_CPP_INCLUDE_DIRS})
+include_directories(${OpenCL_INCLUDE_DIRS})
 
 add_executable(lambdaray ${SOURCES} ${HEADERS})
-target_link_libraries(lambdaray ${OPENCL_LIBRARIY})
+target_link_libraries(lambdaray ${OPENCL_LIBRARIES})
