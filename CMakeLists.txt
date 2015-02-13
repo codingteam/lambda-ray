@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 PROJECT(lambda-ray C CXX)
 
-file(GLOB_RECURSE SOURCES "./src" "*.cpp")
-file(GLOB_RECURSE HEADERS "./src" "*.hpp")
+file(GLOB_RECURSE SOURCES "./src/*.cpp")
+file(GLOB_RECURSE HEADERS "./src/*.hpp")
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
